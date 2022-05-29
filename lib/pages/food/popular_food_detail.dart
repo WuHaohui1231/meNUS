@@ -99,36 +99,40 @@ class PopularFoodDetail extends StatelessWidget {
                   left: Dimensions.width20,
                   right: Dimensions.width20),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimensions.radius20),
-                  color: Colors.white),
-              child: Row(children: [
-                Icon(
-                  Icons.remove,
-                  color: AppColors.signColor,
-                ),
-                SizedBox(
-                  width: Dimensions.width10 / 2,
-                ),
-                BigText(text: "0"),
-                SizedBox(
-                  width: Dimensions.width10 / 2,
-                ),
-                Icon(Icons.add, color: AppColors.signColor)
-              ]),
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
+                color: Colors.white,
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.remove,
+                    color: AppColors.signColor,
+                  ),
+                  SizedBox(
+                    width: Dimensions.width10 / 2,
+                  ),
+                  BigText(text: "0"),
+                  SizedBox(
+                    width: Dimensions.width10 / 2,
+                  ),
+                  Icon(Icons.add, color: AppColors.signColor)
+                ],
+              ),
             ),
             Container(
-                padding: EdgeInsets.only(
-                    top: Dimensions.height20,
-                    bottom: Dimensions.height20,
-                    left: Dimensions.width20,
-                    right: Dimensions.width20),
-                child: BigText(
-                  text: "\$10 | Add to cart",
-                  color: Colors.white,
-                ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(Dimensions.radius20),
-                    color: AppColors.mainColor))
+              padding: EdgeInsets.only(
+                  top: Dimensions.height20,
+                  bottom: Dimensions.height20,
+                  left: Dimensions.width20,
+                  right: Dimensions.width20),
+              child: BigText(
+                text: "\$10 | Add to cart",
+                color: Colors.white,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(Dimensions.radius20),
+                  color: AppColors.mainColor),
+            ),
           ],
         ),
       ),
