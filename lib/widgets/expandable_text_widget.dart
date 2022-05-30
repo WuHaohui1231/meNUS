@@ -33,33 +33,39 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
   Widget build(BuildContext context) {
     return Container(
       child: secondHalf.isEmpty
-          ? SmallText(text: firstHalf)
-          : Column(children: [
-              SmallText(
-                height: 1.5,
-                color: AppColors.paraColor,
-                size: Dimensions.font16,
-                text:
-                    hiddenText ? (firstHalf + "...") : (firstHalf + secondHalf),
-              ),
-              InkWell(
+          ? SmallText(text: firstHalf, size: 13)
+          : Column(
+              children: [
+                SmallText(
+                  height: 1.5,
+                  color: AppColors.paraColor,
+                  size: Dimensions.font16,
+                  text: hiddenText
+                      ? (firstHalf + "...")
+                      : (firstHalf + secondHalf),
+                ),
+                InkWell(
                   onTap: () {
                     setState(() {
                       hiddenText = !hiddenText;
                     });
                   },
-                  child: Row(children: [
-                    SmallText(
-                      text: hiddenText ? "Show more" : "Show less",
-                      color: AppColors.mainColor,
-                    ),
-                    Icon(
-                        hiddenText
-                            ? Icons.arrow_drop_down
-                            : Icons.arrow_drop_up,
-                        color: AppColors.mainColor),
-                  ]))
-            ]),
+                  child: Row(
+                    children: [
+                      SmallText(
+                        text: hiddenText ? "Show more" : "Show less",
+                        color: AppColors.themeColor2,
+                      ),
+                      Icon(
+                          hiddenText
+                              ? Icons.arrow_drop_down
+                              : Icons.arrow_drop_up,
+                          color: AppColors.themeColor2),
+                    ],
+                  ),
+                )
+              ],
+            ),
     );
   }
 }

@@ -3,11 +3,11 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:menus/utils/app_constants.dart';
 import '../api/api_client.dart';
 
-class RecommendedProductRepo extends GetxService {
+class PromotionProductRepo extends GetxService {
   final ApiClient apiClient;
-  RecommendedProductRepo({required this.apiClient});
+  PromotionProductRepo({required this.apiClient});
 
-  Future<Response> getRecommendedProductList() async {
-    return await apiClient.getData(AppConstants.RECOMMENDED_PRODUCTS_URI);
+  Future<Response> getPromotionProductList() async {
+    return await apiClient.getData(AppConstants.PROMOTION_PRODUCTS_URI);
   }
 }

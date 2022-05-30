@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
 class AppColors {
+  static const Color themeColor1 = const Color.fromARGB(255, 239, 124, 0);
+  static const Color themeColor2 = const Color.fromARGB(255, 0, 61, 124);
   static const Color textColor = const Color(0xFFccc7c5);
-  static const Color mainColor = const Color(0xFF89dad0);
   static const Color iconColor1 = const Color(0xFFffd28d);
   static const Color iconColor2 = const Color(0xFFfcab88);
   static const Color paraColor = const Color(0xFF8f837f);
