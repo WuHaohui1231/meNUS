@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:menus/pages/auth/sign_up_page.dart';
+import 'package:menus/pages/home/main_food_page.dart';
+import 'package:menus/routes/route_helper.dart';
 import 'package:menus/utils/colors.dart';
 import 'package:menus/widgets/app_text_field.dart';
 import '../../utils/dimensions.dart';
@@ -105,10 +107,15 @@ class SignInPage extends StatelessWidget {
                   ),
                   color: AppColors.themeColor1),
               child: Center(
-                child: BigText(
-                  text: "Sign In",
-                  size: Dimensions.font20 + Dimensions.font20 / 2,
-                  color: AppColors.themeColor2,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.to(MainFoodPage());
+                  },
+                  child: BigText(
+                    text: "Sign In",
+                    size: Dimensions.font20 + Dimensions.font20 / 2,
+                    color: AppColors.themeColor2,
+                  ),
                 ),
               ),
             ),

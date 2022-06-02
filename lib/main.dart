@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:menus/controllers/popular_product_controller.dart';
 import 'package:menus/controllers/promotion_product_controller.dart';
+import 'package:menus/pages/auth/sign_in_page.dart';
 import 'package:menus/pages/food/promotion_food_detail.dart';
 import 'package:menus/pages/home/food_page_body.dart';
 import 'package:menus/pages/home/main_food_page.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainFoodPage(),
+      home: SignInPage(),
       initialRoute: RouteHelper.initial,
       getPages: RouteHelper.routes,
     );
