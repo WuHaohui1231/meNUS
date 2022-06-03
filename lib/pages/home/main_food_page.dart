@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:menus/controllers/popular_product_controller.dart';
+import 'package:menus/pages/auth/sign_in_page.dart';
 import 'package:menus/utils/colors.dart';
 import 'package:menus/widgets/big_text.dart';
 import 'package:menus/widgets/small_text.dart';
@@ -12,6 +13,7 @@ class MainFoodPage extends StatefulWidget {
 
   @override
   State<MainFoodPage> createState() => _MainFoodPageStatus();
+  
 }
 
 class _MainFoodPageStatus extends State<MainFoodPage>
@@ -30,8 +32,51 @@ class _MainFoodPageStatus extends State<MainFoodPage>
     _controller.dispose();
   }
 
+  // final logoutButton = Material(
+  //     color: AppColors.themeColor1,
+  //     elevation: 5,
+  //     borderRadius: BorderRadius.circular(30),
+  //     child: MaterialButton(
+  //       padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+  //       minWidth: 30,
+  //       onPressed: () {
+  //         Get.to(() => SignInPage());
+  //       },
+  //       child: Text(
+  //         "Log Out", 
+  //         textAlign: TextAlign.center,
+  //         style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold)
+  //       ),
+        
+  //     ),
+  //   );
+
   @override
   Widget build(BuildContext context) {
+
+    final logoutButton = Material(
+      color: AppColors.themeColor1,
+      elevation: 5,
+      borderRadius: BorderRadius.circular(30),
+      child: MaterialButton(
+        padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+        minWidth: 30,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => 
+                                  SignInPage())
+          );
+        },
+        child: Text(
+          "Log Out", 
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold)
+        ),
+        
+      ),
+    );
+
     Get.find<PopularProductController>().getPopularProductList();
     return Scaffold(
       body: Column(
@@ -93,6 +138,8 @@ class _MainFoodPageStatus extends State<MainFoodPage>
           Expanded(
             child: SingleChildScrollView(child: FoodPageBody()),
           ),
+
+          logoutButton
         ],
       ),
     );
