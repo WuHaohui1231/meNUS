@@ -7,11 +7,13 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:menus/pages/auth/sign_up_page.dart';
 import 'package:menus/pages/home/main_food_page.dart';
+import 'package:menus/pages/vendor/vendor_home.dart';
 import 'package:menus/routes/route_helper.dart';
 import 'package:menus/utils/colors.dart';
 import 'package:menus/widgets/app_text_field.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/big_text.dart';
+import '../vendor/vendor_home.dart';
 
 class SignInPage extends StatelessWidget {
   //const SignInPage({Key? key}) : super(key: key);
@@ -151,6 +153,29 @@ class SignInPage extends StatelessWidget {
         },
         child: Text(
           "Login", 
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold)
+        ),
+        
+      ),
+    );
+
+    final vendorButton = Material(
+      //width: Dimensions.screenWidth * 0.7,
+      color: AppColors.themeColor1,
+      elevation: 5,
+      borderRadius: BorderRadius.circular(30),
+      child: MaterialButton(
+        padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+        minWidth: MediaQuery.of(context).size.width,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const VendorHome()),
+          );
+        },
+        child: Text(
+          "Register as a vendor", 
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold)
         ),
@@ -324,6 +349,11 @@ class SignInPage extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: Dimensions.screenHeight * 0.04,
+            ),
+            vendorButton
+
           ],
         ),
       ),
