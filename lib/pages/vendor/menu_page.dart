@@ -90,7 +90,7 @@ class _VendorMenuPageState extends State<VendorMenuPage> {
       borderRadius: BorderRadius.circular(2),
       child: MaterialButton(
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-        minWidth: Dimensions.screenWidth,
+        minWidth: Dimensions.screenWidth * 0.5,
         onPressed: () {
           setState(() {
             mode = true;
@@ -111,7 +111,7 @@ class _VendorMenuPageState extends State<VendorMenuPage> {
       borderRadius: BorderRadius.circular(2),
       child: MaterialButton(
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-        minWidth: Dimensions.screenWidth,
+        minWidth: Dimensions.screenWidth * 0.5,
         onPressed: () {
           setState(() {
             mode = true;

@@ -23,7 +23,7 @@ class _VendorHomeState extends State<VendorHome> {
     ProfilePage()
   ];
 
-  String title = 'Your Resturant';
+  String title = 'Your Stall';
 
   @override
   Widget build(BuildContext context) {
