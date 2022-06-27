@@ -92,6 +92,9 @@ class _DishState extends State<Dish> {
                     SizedBox(height: Dimensions.width10),
                     Text(
                       dish.description,
+                      style: TextStyle(
+                        fontSize: 12
+                      ),
                       
                     ),
                     SizedBox(height: Dimensions.width10),

@@ -137,7 +137,7 @@ class MapScreenState extends State<ProfilePage>
                               new Flexible(
                                 child: new TextField(
                                   decoration: const InputDecoration(
-                                    hintText: "Enter Your Name",
+                                    hintText: "Enter Name",
                                   ),
                                   enabled: !_status,
                                   autofocus: !_status,

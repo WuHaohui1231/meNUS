@@ -13,6 +13,7 @@ class Order extends StatelessWidget {
   double total_price;
   String customer;
   String time;
+  Function? handleComplete;
 
   Order(
       {Key? key,
@@ -56,7 +57,7 @@ class Order extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                 minWidth: Dimensions.screenWidth * 0.2,
                 onPressed: () {
-                  return ;
+                  handleComplete!(this.id);
                 },
                 child: Text("Complete",
                     textAlign: TextAlign.center,
